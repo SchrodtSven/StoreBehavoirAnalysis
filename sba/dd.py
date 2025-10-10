@@ -9,6 +9,7 @@ class DD:
     pages = {
         "Foo": "Test Page",
         "Home": "Frontpage",
+        "Perday": "Daily Views"
     }
 
     col_transl = {

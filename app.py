@@ -33,7 +33,7 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
     suppress_callback_exceptions=True,
 )
-app.title = "Data on the rocks"
+app.title = "Store Behavoir Analysis Oct 2017 - Apr 2020"
 
 navbar = dbc.NavbarSimple(
     [   
@@ -44,7 +44,7 @@ navbar = dbc.NavbarSimple(
                 if page["module"] != "pages.not_found_404"
             ],
             nav=True,
-            label="Auswahl",
+            label="Select Item",
         ),
     ],
     brand=app.title,
