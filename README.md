@@ -10,7 +10,7 @@ A data analyst's view on e-commerce; EDA, ML etc. with Python (Pandas, Dash)
 ## Current statusTodos
 
 - [x] all 7 "big data" files reduced to non-na (Sani-Red.ipynb is done!)
-- [x] Normalized data filez created
-- [x] Aggregate daily / monthly
+- [x] Normalized data filez created (brands, products, categories)
+- [ ] Aggregate daily / monthly
 - [ ] replace text with ids from normalized files
 
