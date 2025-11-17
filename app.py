@@ -20,8 +20,9 @@ import dash
 load_figure_template(["sandstone", "simplex"])
 
 # project libs
-from sba.dd import DD
-#from cfg import Cfg
+
+
+# from cfg import Cfg
 
 # This stylesheet defines the "dbc" class.  Use it to style dash-core-components
 # and the dash DataTable with the bootstrap theme.
@@ -33,28 +34,47 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
     suppress_callback_exceptions=True,
 )
-app.title = "Store Behavoir Analysis Oct 2017 - Apr 2020"
+app.title = "StoreBehavoirAnalysis "
 
 navbar = dbc.NavbarSimple(
-    [   
+    [
         dbc.DropdownMenu(
             [
-                dbc.DropdownMenuItem(DD.pages[page["name"]], href=page["path"])
+                dbc.DropdownMenuItem(page["name"], href=page["path"])
                 for page in page_registry.values()
                 if page["module"] != "pages.not_found_404"
             ],
             nav=True,
-            label="Select Item",
+            label="Select",
         ),
     ],
-    brand=app.title,
     color="primary",
     dark=True,
-    className="mb-2",
+    className="mb-2 custom-navbar",
 )
 
 app.layout = dbc.Container([navbar, page_container], fluid=True, className="dbc")
 
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
+'''
+
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8023)
+    app.run(host="0.0.0.0")
     
