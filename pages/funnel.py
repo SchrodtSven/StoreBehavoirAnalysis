@@ -6,7 +6,7 @@ import dash_ag_grid as dag
 register_page(__name__)
 
 sub_title = "🔄 Funnel Analysis"
-
+ 
 df = pd.read_csv("Dta/agg/funnel_all.csv")
 fig = px.funnel(df, x="date", y="count", color="evt")
 
@@ -21,7 +21,7 @@ layout = html.Div(
                     
                 ),
                 html.P(
-                    "Funnel stuff    ",
+                    sub_title
                     
                 ),
             ],
@@ -69,7 +69,7 @@ layout = html.Div(
                             columnSize="responsiveSizeToFit",
                             dashGridOptions={
                                 "pagination": True,
-                                "paginationPageSize": 15,
+                                "paginationPageSize": 23,
                                 "animateRows": True,
                             },
                         ),
