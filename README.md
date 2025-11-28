@@ -1,5 +1,8 @@
 # StoreBehavoirAnalysis
+
 A data analyst's view on e-commerce; EDA, ML etc. with Python (Pandas, Dash)
+
+## Appendix
 
 ### Used Resources
 
@@ -14,6 +17,3 @@ A data analyst's view on e-commerce; EDA, ML etc. with Python (Pandas, Dash)
 - [x] Aggregate daily / monthly Status: **Oct-2019** done -> [see](Eda/Agg.ipynb)
 - [ ] replace text with ids from normalized files
 
-## note 2self
-
-- time series is in C19 
